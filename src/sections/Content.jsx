@@ -16,4 +16,4 @@ const Content = () => {
 }
 
 
-export default Hero
+export default Content
