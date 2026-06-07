@@ -1,30 +1,49 @@
-import Button from "../components/Button"
+import { useState } from "react";
+import Button from "../components/Button";
+import Model from "../components/Models/Model";
+import { Modal } from "../components/Modal";
 
 const Hero = () => {
-    return (
-        <section id="hero" className="hero">
-            <div className="hero-layout">
-                <header className="hero-header">
-                    <div className="hero-text">
-                        <div className="hero-badge">
-                            
-                        </div>
-                        <h1>Sofia López Ayerdi</h1>
-                        <p className="hero-role">Estudiante de la Universidad del Valle</p>
-                        <p className="hero-description">
-                            Estudiante de Ingeniería en Ciencias de la Computación en Universidad del Valle. 
-                            Desarrolladora Full Stack buscando oportunidades para crecer profesionalmente y 
-                            aplicar mis conocimientos para contribuir en soluciones innovadoras.
-                        </p>
-                        <Button
-                            text="Conocer más"
-                            className="cta-wrapper"
-                        />
-                    </div>
-                </header>
-            </div>
-        </section>
-    )
-}
+  const [activeModal, setActiveModal] = useState(null);
 
-export default Hero
+  return (
+    <>
+      <section className="hero">
+        <div className="hero-layout">
+
+          <div className="hero-content">
+            <span className="hero-tag">Frontend Developer</span>
+
+            <h1 className="hero-name">
+              Sofía<br />
+              López<br />
+              <span>Ayerdi</span>
+            </h1>
+
+            <p className="hero-role">Ing. en Ciencias de la Computación</p>
+
+            <p className="hero-description">
+              Construyo interfaces que importan — donde el código
+              limpio y el diseño cuidado se encuentran.
+            </p>
+
+            <Button text="Conocer más" className="cta-wrapper" />
+
+            <p className="hero-hint">Explora el edificio</p>
+          </div>
+
+          <div className="hero-model">
+            <Model onZoneClick={setActiveModal} />
+          </div>
+
+        </div>
+      </section>
+
+      {activeModal && (
+        <Modal type={activeModal} onClose={() => setActiveModal(null)} />
+      )}
+    </>
+  );
+};
+
+export default Hero;

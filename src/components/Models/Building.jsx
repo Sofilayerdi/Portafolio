@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Building(props) {
-  const { nodes, materials } = useGLTF('../../models/low_poly_building.glb')
+  const { nodes, materials } = useGLTF('/models/low_poly_building.glb') 
   return (
     <group {...props} dispose={null}>
       <group position={[-0.086, 0.99, 1.57]} scale={[0.407, 0.29, 0.469]}>
