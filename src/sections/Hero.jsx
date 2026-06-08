@@ -12,22 +12,25 @@ const Hero = () => {
         <div className="hero-layout">
 
           <div className="hero-content">
-            <span className="hero-tag">Frontend Developer</span>
-
             <h1 className="hero-name">
-              Sofía<br />
-              López<br />
+              Sofía López<br />
               <span>Ayerdi</span>
             </h1>
 
             <p className="hero-role">Ing. en Ciencias de la Computación</p>
 
             <p className="hero-description">
-              Construyo interfaces que importan — donde el código
-              limpio y el diseño cuidado se encuentran.
+              Desarrolladora Full Stack apasionada por crear productos digitales funcionales 
+              y bien diseñados. Experiencia en desarrollo web, bases de datos y construcción de 
+              interfaces intuitivas. Siempre buscando aprender, crecer y aportar soluciones con impacto real.
             </p>
 
-            <Button text="Conocer más" className="cta-wrapper" />
+            <Button
+              text="Descargar CV"
+              className="cta-wrapper"
+              href="/cv-sofia-lopez.pdf"
+              download="CV_Sofia_Lopez_Ayerdi.pdf"
+            />
 
             <p className="hero-hint">Explora el edificio</p>
           </div>

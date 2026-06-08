@@ -1,8 +1,8 @@
 import arrowIcon from '../assets/arrow-down.svg';
 
-const Button = ({ text, className }) => {
+const Button = ({ text, className, href, download }) => {
   return (
-    <a className={className}>
+    <a className={className} href={href} download={download}>
       <div className="cta-button">
         <div className="bg-circle" />
         <p className="text">{text}</p>
