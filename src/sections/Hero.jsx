@@ -28,7 +28,7 @@ const Hero = () => {
             <Button
               text="Descargar CV"
               className="cta-wrapper"
-              href="/cv-sofia-lopez.pdf"
+              href="/CV-Sofia-Lopez.pdf"
               download="CV_Sofia_Lopez_Ayerdi.pdf"
             />
 

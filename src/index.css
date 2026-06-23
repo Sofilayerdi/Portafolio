@@ -6,6 +6,8 @@
   --ink:      #0E1B24;
   --muted:    #4A6070;
   --coral:    #D9807F;
+  --coral-strong: #DA425A;
+  --cream-bd: #f7f2ea7d;
   --coral-light: #e8a09f;
   --blue-acc: #3B6EA5;
   --border:   rgba(14,27,36,0.1);
@@ -323,7 +325,6 @@ body::before {
   z-index: 1;
 }
 
-.modal-title-group {}
 
 .modal-label {
   font-size: 10px;
@@ -392,60 +393,6 @@ body::before {
   height: 1px;
   background: var(--border);
 }
-
-.about-why-title {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.3px;
-  margin-bottom: 1.2rem;
-}
-
-.about-reasons {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.about-reason {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  background: #fff;
-  border: 1px solid rgba(217, 128, 127, 0.15);
-  border-radius: 14px;
-  padding: 0.9rem 1.1rem;
-  box-shadow: 0 2px 8px rgba(217,128,127,0.05);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.about-reason:hover {
-  box-shadow: 0 5px 18px rgba(217,128,127,0.12);
-  transform: translateX(3px);
-}
-
-.about-reason-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--coral), #e89a99);
-  margin-top: 7px;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 3px rgba(217,128,127,0.15);
-}
-
-.about-reason p {
-  font-size: 0.875rem;
-  line-height: 1.7;
-  color: var(--muted);
-  max-width: none;
-}
-
-.about-reason p strong {
-  color: var(--ink);
-  font-weight: 500;
-}
-
 
 .skills-new {
   display: flex;
@@ -749,10 +696,10 @@ body::before {
   align-items: center;
   gap: 6px;
   padding: 6px 12px 6px 8px;
-  background: transparent;
+  background: var(--cream-bd);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 2px solid var(--coral);
+  border: 2px solid var(--coral-strong);
   border-radius: 15px;
   cursor: pointer;
   box-shadow: 0 3px 14px rgba(217,128,127,0.35), 0 1px 4px rgba(14,27,36,0.1);
@@ -762,7 +709,7 @@ body::before {
 }
 
 .hotspot-btn:hover {
-  background: var(--coral);
+  background: var(--coral-strong);
   transform: scale(1.08);
   box-shadow: 0 6px 20px rgba(217,128,127,0.5);
 }
@@ -781,7 +728,7 @@ body::before {
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.5px;
-  color: var(--coral);
+  color: var(--coral-strong);
   transition: color 0.2s;
 }
 

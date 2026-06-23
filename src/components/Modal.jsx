@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import { label } from "three/tsl";
+import bloomImage from "../assets/bloom.jpeg";
+import calculadoraImage from "../assets/calculadora.png";
+import belekImage from "../assets/belek.jpg";
 
 
 const MODALS = {
@@ -8,18 +12,18 @@ const MODALS = {
     content: "about",
   },
   skills: {
-    label: "Habilidades",
+    label: "--",
     title: "Habilidades Técnicas",
     content: "skills",
   },
   projects: {
-    label: "Proyectos",
+    label: "--",
     title: "Proyectos Destacados",
     content: "projects",
   },
   contact: {
-    label: "Contacto",
-    title: "Contáctame",
+    label: "--",
+    title: "Contacto",
     content: "contact",
   },
 };
@@ -37,33 +41,13 @@ function AboutContent() {
         Mi enfoque principal es el <strong>desarrollo Full Stack</strong>, ya que me gusta entender y participar 
         en todo el proceso de construcción de software. Desde el desarrollo de interfaces modernas y experiencias 
         de usuario cuidadas, hasta la implementación de APIs, bases de datos y la lógica que sostiene cada aplicación. 
-        Esta visión integral me permite conectar la experiencia del usuario con la tecnología que la hace posible.
         <br /><br />
-        Soy una persona curiosa, adaptable y con muchas ganas de aprender. Busco oportunidades donde pueda seguir 
-        creciendo como desarrolladora, colaborar en proyectos desafiantes y aportar soluciones de calidad que conviertan 
+        Soy una persona curiosa, responsable y con muchas ganas de aprender. Busco oportunidades donde pueda seguir 
+        creciendo como desarrolladora, colaborar en proyectos interesantes y aportar soluciones de calidad que conviertan 
         ideas complejas en experiencias digitales útiles y bien diseñadas.
 
       </p>
 
-      <div className="about-divider" />
-
-      <div>
-        <p className="about-why-title">¿Por qué trabajar conmigo?</p>
-        <div className="about-reasons">
-          <div className="about-reason">
-            <div className="about-reason-dot" />
-            <p><strong>Aprendo con intención.</strong> Cuando me interesa algo, voy al fondo — no me quedo en la superficie.</p>
-          </div>
-          <div className="about-reason">
-            <div className="about-reason-dot" />
-            <p><strong>Me importa el detalle.</strong> La diferencia entre bueno y memorable está en los márgenes, las transiciones, la tipografía.</p>
-          </div>
-          <div className="about-reason">
-            <div className="about-reason-dot" />
-            <p><strong>Pienso en full-stack.</strong> Diseño interfaces pensando en el backend que las sostiene.</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
@@ -83,21 +67,24 @@ function SkillBar({ level }) {
 
 function SkillsContent() {
   const skills = [
-    { name: "React",       category: "Frontend",    level: 5, icon: "⚛" },
-    { name: "JavaScript",  category: "Frontend",    level: 5, icon: "JS" },
-    { name: "TypeScript",  category: "Frontend",    level: 3, icon: "TS" },
-    { name: "CSS / HTML",  category: "Frontend",    level: 5, icon: "◈" },
-    { name: "Vue",         category: "Frontend",    level: 3, icon: "◉" },
-    { name: "Three.js",    category: "Frontend",    level: 2, icon: "△" },
-    { name: "Go",          category: "Backend",     level: 5, icon: "Go" },
-    { name: "Node.js",     category: "Backend",     level: 4, icon: "◆" },
-    { name: "PostgreSQL",  category: "Backend",     level: 4, icon: "🗄" },
-    { name: "REST APIs",   category: "Backend",     level: 4, icon: "⇄" },
-    { name: "Docker",      category: "Backend",     level: 3, icon: "□" },
-    { name: "Python",      category: "Backend",     level: 3, icon: "Py" },
-    { name: "Git / GitHub",category: "Herramientas",level: 5, icon: "⎇" },
-    { name: "Figma",       category: "Herramientas",level: 4, icon: "✦" },
-    { name: "Vite",        category: "Herramientas",level: 4, icon: "⚡" },
+    { name: "React",       category: "Frontend",    level: 4},
+    { name: "JavaScript",  category: "Frontend",    level: 4},
+    { name: "TypeScript",  category: "Frontend",    level: 2},
+    { name: "CSS / HTML",  category: "Frontend",    level: 5},
+    { name: "Vue",         category: "Frontend",    level: 3},
+    { name: "Three.js",    category: "Frontend",    level: 1},
+    { name: "Go",          category: "Backend",     level: 5},
+    { name: "Node.js",     category: "Backend",     level: 4},
+    { name: "PostgreSQL",  category: "Backend",     level: 4},
+    { name: "REST APIs",   category: "Backend",     level: 4},
+    { name: "Docker",      category: "Backend",     level: 3},
+    { name: "Python",      category: "Backend",     level: 3},
+    { name: "Git / GitHub",category: "Herramientas",level: 5},
+    { name: "Figma",       category: "Herramientas",level: 5},
+    { name: "Vite",        category: "Herramientas",level: 4},
+    { name: "Kotlin",      category: "Frontend", level: 2},
+    { name: "Android Studio", category: "Herramientas", level: 2},
+
   ];
 
   const categories = ["Frontend", "Backend", "Herramientas"];
@@ -130,20 +117,20 @@ function ProjectsContent() {
       name: "Bloom Florería",
       description:
         "Sistema de gestión para una florería con autenticación JWT, roles de PostgreSQL (gerente, vendedor, auditor, comprador), control de inventario en tiempo real, creación de ramos y reportes de ventas mensuales.",
-      techs: ["React", "Go", "PostgreSQL", "Docker"],
-      image: "/src/assets/bloom.jpeg",
+      techs: ["React", "Go", "PostgreSQL", "Docker", "GORM"],
+      image: bloomImage,
     },
     {
       name: "Calculadora Web",
       description: "Calculadora desarrollada en React + TypeScript con operaciones básicas, soporte decimal y manejo de errores. Incluye pruebas unitarias con Vitest y Testing Library, documentación visual con Storybook y despliegue en GitHub Pages.",
       techs: ["React", "TypeScript"],
-      image: "/src/assets/calculadora.png",
+      image: calculadoraImage,
     },
     {
       name: "Bele'k",
       description: "Aplicación Android de turismo en Guatemala desarrollada en Kotlin con Jetpack Compose. Recomienda destinos populares y poco conocidos según los intereses del usuario, con autenticación Supabase, base de datos local con Room, mapas con Google Maps API y soporte para múltiples idiomas y monedas.",
       techs: ["Kotlin", "Jetpack Compose"],
-      image: "/src/assets/belek.jpeg",
+      image: belekImage,
     },
   ];
 
